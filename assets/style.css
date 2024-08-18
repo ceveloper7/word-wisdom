@@ -67,15 +67,20 @@
     U+FEFF, U+FFFD;
 }
 
+:root {
+  --step--2: clamp(0.7rem, calc(0.87rem + -0.14vw), 0.84rem);
+  --step--1: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
+  --step-0: clamp(1.06rem, calc(1.03rem + 0.19vw), 1.25rem);
+  --step-1: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem);
+  --step-2: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem);
+  --step-3: clamp(1.51rem, calc(1.22rem + 1.45vw), 2.96rem);
+  --step-4: clamp(1.7rem, calc(1.25rem + 2.25vw), 3.95rem);
+  --step-5: clamp(1.91rem, calc(1.25rem + 3.35vw), 5.26rem);
+  --step-6: clamp(2.15rem, calc(1.18rem + 4.86vw), 7.01rem);
+}
+
 /* ******************** Custom Properties ******************** */
-:root{
-  --container-sm: 48em;
-  --container-md: 62em;
-  --container-lg: 75em;
-
-  --main-top: 2rem;
-  --main-bottom: 2rem;
-
+:root {
   --font-primary: "PT Sans", Avenir, system-ui, sans-serif;
   --font-logo: "Raleway", sans-serif;
   --font-logo-black: "Raleway Black", sans-serif;
@@ -98,17 +103,6 @@
   --color-dark-text: #fcfcfc;
   --color-dark-link: #73cffa;
   --color-dark-contrast: #3c4654;
-
-  --gradient-primary: linear-gradient(
-    45deg,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  --gradient-link: linear-gradient(
-    45deg,
-    var(--color-dark-link),
-    var(--color-light-link)
-  );
 }
 
 /* ******************** User Prefers ******************** */
@@ -162,57 +156,6 @@ body.light {
   --color-contrast: var(--color-light-contrast);
 }
 
-/* ******************** Animations ******************** */
-
-@keyframes bounce {
-  40% {
-    transform: scale(1.4);
-  }
-
-  60% {
-    transform: scale(0.8);
-  }
-
-  80% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.bounce {
-  animation: bounce 0.4s linear;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.pulse {
-  animation: pulse 1.5s linear infinite;
-}
-
-@keyframes scroll-image {
-  0% {
-    opacity: 0;
-    scale: 25%;
-  }
-
-  100% {
-    opacity: 1;
-    scale: 100%;
-  }
-}
 
 /* ******************** Reset CSS ******************** */
 
@@ -444,25 +387,54 @@ th {
 /* ******************** Components UI ******************** */
 
 /* ******************** Header ******************** */
-
-
-.announcement {
-  background-color: var(--color-svg-bg);
-  border: solid thin red;
-  height: 36px;
-  margin-bottom: 8px;
+header{
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.announcement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B8E9EE;
+  height: 35px;
 }
 
 .announcement a{
-  border: solid thin green;
-  color: var(--color-dark-text);
-  padding: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  text-decoration: none;
+  margin-top: 5px;
 }
 
-.help-list-item li{
-  display: inline-block;
-  list-style: none;
-  padding: 0 10px 0;
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--color-bg);
+}
+
+.header-container div:nth-child(3){
+  order: 5;
+}
+
+/* tamanio pequenio de 576px en adelante */
+@media (min-width: 576px) {
+  
+}
+
+/* tamanio mediano de 768px en adelante */
+@media (min-width: 768px) {
+}
+
+/* tamanio grande de 992px en adelante */
+@media (min-width: 992px) {
+}
+
+/* tamanio extra grande de 1200px en adelante */
+@media (min-width: 1200px) {
+  
 }
