@@ -156,7 +156,6 @@ body.light {
   --color-contrast: var(--color-light-contrast);
 }
 
-
 /* ******************** Reset CSS ******************** */
 
 *,
@@ -387,20 +386,20 @@ th {
 /* ******************** Components UI ******************** */
 
 /* ******************** Header ******************** */
-header{
+header {
   margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
 }
-.announcement{
+.announcement {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #B8E9EE;
+  background-color: #b8e9ee;
   height: 35px;
 }
 
-.announcement a{
+.announcement a {
   text-decoration: none;
   margin-top: 5px;
 }
@@ -417,13 +416,59 @@ header{
   background: var(--color-bg);
 }
 
-.header-container div:nth-child(3){
+.header-container div:nth-child(3) {
   order: 5;
 }
 
+.header-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  position: relative;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  right: 25px;
+}
+
 /* tamanio pequenio de 576px en adelante */
-@media (min-width: 576px) {
-  
+@media (min-width: 476px) {
+  .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    background: var(--color-bg);
+  }
+
+  .header-container div:nth-child(3) {
+    order: 5;
+  }
+
+  .menu-nav{
+    margin-right: 32px;
+  }
+
+  .header-logo{
+    margin-right: 32px;
+  }
+
+  .header-profile{
+    margin-right: 32px;
+  }
+
+  .header-cart{
+    margin-right: 32px;
+  }
 }
 
 /* tamanio mediano de 768px en adelante */
@@ -436,5 +481,4 @@ header{
 
 /* tamanio extra grande de 1200px en adelante */
 @media (min-width: 1200px) {
-  
 }
