@@ -404,6 +404,10 @@ header {
   margin-top: 5px;
 }
 
+.menu-nav{
+  margin-left: 20px;
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -420,10 +424,18 @@ header {
   order: 5;
 }
 
+.header-logo{
+  padding-left: 2rem;
+}
+
 .header-search {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px 30px 5px 15px;
+  border: 1px solid var(--color-light-link);
+  border-radius: 50px;
+  padding-left: 10px;
 }
 
 .search-icon {
