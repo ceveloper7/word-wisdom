@@ -1,0 +1,23 @@
+{
+  "name": "wordandwisdom",
+  "version": "1.0.0",
+  "description": "Word & Wisdom project - Christians books repository\"",
+  "main": "index.html",
+  "scripts": {
+    "dev":"sergey --watch",
+    "start": "sergey"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceveloper7/word-wisdom.git"
+  },
+  "author": "Carlos V.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ceveloper7/word-wisdom/issues"
+  },
+  "homepage": "https://github.com/ceveloper7/word-wisdom#readme",
+  "dependencies": {
+    "sergey": "^0.0.13"
+  }
+}
